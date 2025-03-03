@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav"> 
+      
+            <a href="./index.html">
+                <div class="btn">
+                    <strong>Inicio</strong>
+                    <div class="container-stars">
+                       
+                      <div class="stars"></div>
+       
+                    </div>
+                    <div class="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div></div></a>
+        <h1>Biblioteca Virtual Escuela de Música J.J. Urquiza</h1>
+        <div class="logo-container">
+            <img src="images/images.jpeg" alt="logo" id="logo">
+        </div>
+        </nav>
+    </header>
+    <main>
+
+        <br>
+             <!-- Filtro de categorías -->
+             <label for="category"></label>
+             <select action="./libreria.html" method="GET" id="category" onchange="filterByCategory()">
+                 <option value="all">Todas las categorías</option>
+                 <option value="Guitarra">Guitarra</option>
+                 <option value="Lenguaje Musical">Lenguaje Musical</option>
+                 <option value="Percusion">Percusion</option>
+                 <option value="Piano">Piano</option>
+             </select>
+     
+             <!-- Cuadro de búsqueda -->
+     <form action="./libreria.html" method="GET">
+         <input type="text" id="search" name="query" placeholder="Buscar un libro...">
+         <button type="submit">Buscar</button>
+     </form>
+        <div class="book-list" id="book-list">
+            <div class="book" data-title="1° Primer Album Cecilia" data-category="Piano">
+                <h2>1° Primer Album Cecilia</h2>
+                <p><a href="https://drive.google.com/file/d/1tEvrwfr1EWh_QMt_53C9hnWTxz87JxC7/view?usp=drive_link"
+                        target="_blank">Leer</a></p>
+            </div>
+            <div class="book" data-title="2° Segundo Album Cecilia" data-category="Piano">
+                <h2>2° Segundo Album Cecilia</h2>
+                <p><a href="https://drive.google.com/file/d/1fcV5yOYkitvZcqMrZFJ57znbO65DUOBQ/view?usp=drive_link"
+                        target="_blank">Leer</a></p>
+            </div>
+            <div class="book" data-title="F. Beyer - op. 101" data-category="Piano">
+                <h2>F. Beyer op. 101</h2>
+                <p><a href="https://drive.google.com/file/d/1fO3bkqwbRjA41lJcryXbdbDopjlhSFOv/view?usp=drive_link" target="_blank">Leer</a></p>
+            </div>
+            <div class="book" data-title="Rosatti - cartilla estudios del 1 al 29" data-category="Guitarra">
+                <h2>Rosatti cartilla estudios del 1 al 29</h2>
+                <p><a href="https://drive.google.com/file/d/1oGXZt9SuNso_cfFW90OKO-hNNwZKR8c8/view?usp=drive_link"
+                        target="_blank">Leer</a></p>
+            </div>
+            <div class="book" data-title="Panorama Inicial - Cesar Amaro" data-category="Guitarra">
+                <h2>Panorama Inicial Cesar Amaro</h2>
+                <p><a href="https://drive.google.com/file/d/1NNMLZlbRBxt_VaWkTHLz1Xd_1LJUIUDo/view?usp=drive_link"
+                        target="_blank">Leer</a></p>
+            </div>
+            <div class="book" data-title="Las primeras lecciones de guitarra - Julio Sagreras" data-category="Guitarra">
+                <h2>Las primeras lecciones de guitarra - Julio Sagreras</h2>
+                <p><a href="https://drive.google.com/file/d/12A6h_vcZDZh1_ul8zENfdlpKgveiTAOF/view?usp=drive_link" target="_blank">Leer</a></p>
+            </div>
+            <div class="book" data-title="Cuadernillo Lenguaje Musical I y II" data-category="Lenguaje Musical">
+                <h2>Cuadernillo Lenguaje Musical I y II</h2>
+                <p><a href="https://drive.google.com/file/d/1rn-QNUnYpvGRv3MPIMoOZUe5IqQfQC-G/view?usp=drive_link"
+                        target="_blank">Leer</a></p>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <p class="derechos"> ®Desing by: Angel Perla <a href=""></a></p>
+    </footer>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js">
+    </script>-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

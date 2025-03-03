@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav"> 
+      
+            <a href="./libreria.html">
+                <div class="btn">
+                    <strong>Home</strong>
+                    <div class="container-stars">
+                       
+                      <div class="stars"></div>
+       
+                    </div>
+                    <div class="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div></div></a>
+        <h1>Biblioteca Virtual Escuela de Música J.J. Urquiza</h1>
+        <div class="logo-container">
+            <img src="images/images.jpeg" alt="logo" id="logo">
+        </div>
+       </nav>
+    </header>
+    <main>
+
+        <br>
+        <!-- Filtro de categorías -->
+        <label for="category"></label>
+        <select action="./libreria.html" method="GET" id="category" onchange="filterByCategory()">
+            <option value="all">Todas las categorías</option>
+            <option value="Guitarra">Guitarra</option>
+            <option value="Lenguaje Musical">Lenguaje Musical</option>
+            <option value="Percusion">Percusion</option>
+            <option value="Piano">Piano</option>
+        </select>
+
+        <!-- Cuadro de búsqueda -->
+<form action="./libreria.html" method="GET">
+    <input type="text" id="search" name="query" placeholder="Buscar un libro...">
+    <button type="submit">Buscar</button>
+</form>
+
+
+    </main>
+    <footer>
+        <p class="derechos"> ®Desing by: Angel Perla <a href=""></a></p>
+    </footer>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js">
+    </script>-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
