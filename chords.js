@@ -2,7 +2,7 @@
 
 // Función para reproducir un acorde usando múltiples notas
 function playChord(notes) {
-    const sounds = notes.map(note => new Audio(noteFiles[not])); // Crear un array de audios
+    const sounds = notes.map(note => new Audio(noteFiles[note])); // Crear un array de audios
 
     // Reproducir todas las notas al mismo tiempo
     sounds.forEach(sound => sound.play().catch(error => console.log('Error al reproducir el acorde:', error)));
