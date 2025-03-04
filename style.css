@@ -57,35 +57,76 @@ header {
     width: 75%;
     border-radius: 5px;
 }
-.check{
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    background-color: #40404065;
+
+
+
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
     padding: 10px 20px;
-    font-size: 16px;
-    margin: 1px;
-    border: none;
+    border: 2px solid #ccc; /* Borde gris claro */
     border-radius: 5px;
-    color: white;
+    margin: 5px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
 }
+
+.custom-checkbox input[type="checkbox"] {
+    appearance: none; /* Elimina el estilo predeterminado del checkbox */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555; /* Borde gris oscuro */
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+    background-color: #091209; /* Fondo verde cuando está marcado */
+    border-color: #141921e4; ; /* Borde verde cuando está marcado */
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Símbolo de verificación */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+}
+
+.custom-checkbox:hover {
+    background-color: #f0f0f0; /* Fondo gris ligeramente más oscuro al pasar el ratón */
+    border-color: #aaa; /* Borde gris ligeramente más oscuro al pasar el ratón */
+}
+
+
 #grados{
-display: flex;
-justify-content: space-around;
 width: 90%;
-background-color: #40404065;
+background-color:var(--secondary-color);
 padding: 10px 20px;
 font-size: 16px;
 margin: 1px;
 border: none;
 border-radius: 5px;
-color: white;
 cursor: pointer;
 transition: background-color 0.2s ease;
 }
+#grados2{
+width: 90%;
+background-color:var(--secondary-color);
+padding: 10px 20px;
+font-size: 16px;
+margin: 1px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
 
 button {
     background-color: var(--button-bg);
@@ -100,6 +141,7 @@ button {
 }
 
 button:hover {
+    
     background-color: var(--button-hover-bg);
 }
 
@@ -139,6 +181,49 @@ button:hover {
 }
 
 .dropdown-content2 button:hover {
+    color: var(--dropdown-link-hover-color);
+    background-color: var(--button-hover-bg);
+  
+}
+
+
+
+.dropdown3 {
+    display: inline-block;
+    position: relative;
+    width: 100%; /* Ancho fijo para los dropdowns */
+    border-radius: 10px;
+}
+
+.dropdown-content3 {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    z-index: 10; /* Asegura que el dropdown esté encima de otros elementos */
+}
+
+.dropdown3:hover .dropdown-content3 {
+    display: block;
+    width: 200%;
+    border-radius: 10px;
+}
+
+.dropdown-content3 button {
+    display: block;
+    color: var(--dropdown-link-color);
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--dropdown-bg);
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-content3 button:hover {
     color: var(--dropdown-link-hover-color);
     background-color: var(--button-hover-bg);
   

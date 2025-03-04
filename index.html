@@ -163,16 +163,17 @@
     <section class="bloques">
     <h2>Probemos Ejercitar la escucha activa</h2>
     <h3>Seleccione los grados a entrenar</h3>
-
+    
     <div id="grados" class="check">
-        <label><input type="checkbox" value="I"> DO Mayor (I)</label>
-        <label><input type="checkbox" value="II"> RE Menor (II)</label>
-        <label><input type="checkbox" value="III"> MI Menor (III)</label>
-        <label><input type="checkbox" value="IV"> FA Mayor (IV)</label>
-        <label><input type="checkbox" value="V"> SOL Mayor (V)</label>
-        <label><input type="checkbox" value="VI"> LA Menor (VI)</label>
-        <label><input type="checkbox" value="VII"> SI Disminuido (VII)</label>
+        <label class="custom-checkbox"><input type="checkbox" value="I"> DO Mayor (I)</label>
+        <label class="custom-checkbox"><input type="checkbox" value="II"> RE Menor (II)</label>
+        <label class="custom-checkbox"><input type="checkbox" value="III"> MI Menor (III)</label>
+        <label class="custom-checkbox"><input type="checkbox" value="IV"> FA Mayor (IV)</label>
+        <label class="custom-checkbox"><input type="checkbox" value="V"> SOL Mayor (V)</label>
+        <label class="custom-checkbox"><input type="checkbox" value="VI"> LA Menor (VI)</label>
+        <label class="custom-checkbox"><input type="checkbox" value="VII"> SI Disminuido (VII)</label>
     </div>
+    
 
     <h3>Comience a reproducir</h3>
     <button onclick="iniciarEjercicio()">Iniciar Ejercicio</button>
@@ -368,19 +369,18 @@
         <h3>Seleccione los intervalos a entrenar</h3>
 
         <div id="grados2" class="check">
-            <label><input type="checkbox" value="2M"> 2da Mayor</label>
-            <label><input type="checkbox" value="2m"> 2da Menor</label>
-            <label><input type="checkbox" value="3M"> 3ra Mayor</label>
-            <label><input type="checkbox" value="3m"> 3ra Menor</label>
-            <label><input type="checkbox" value="4J"> 4ta Justa</label>
-            <label><input type="checkbox" value="5J"> 5ta Justa</label>
-            <label><input type="checkbox" value="6M"> 6ta Mayor</label>
-            <label><input type="checkbox" value="6m"> 6ta Menor</label>
-            <label><input type="checkbox" value="7M"> 7ma Mayor</label>
-            <label><input type="checkbox" value="7m"> 7ma Menor</label>
-            <label><input type="checkbox" value="8J"> 8va Justa</label>
+            <label class="custom-checkbox"><input type="checkbox" value="2M"> 2da Mayor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="2m"> 2da Menor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="3M"> 3ra Mayor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="3m"> 3ra Menor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="4J"> 4ta Justa</label>
+            <label class="custom-checkbox"><input type="checkbox" value="5J"> 5ta Justa</label>
+            <label class="custom-checkbox"><input type="checkbox" value="6M"> 6ta Mayor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="6m"> 6ta Menor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="7M"> 7ma Mayor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="7m"> 7ma Menor</label>
+            <label class="custom-checkbox"><input type="checkbox" value="8J"> 8va Justa</label>
         </div>
-
         <h3>Comience a reproducir</h3>
         <button onclick="iniciarEjercicioIntervalos()">Iniciar Ejercicio</button>
 
@@ -390,173 +390,173 @@
         <h3>Selecione los intervalos que escuchó</h3>
 
         <div id="opciones2" class="chord-buttons-exe">
-            <div class="dropdown2" data-index="0">
+            <div class="dropdown3" data-index="0">
                 <button id="intervalos-1" onclick="activarSecuencia(0)">1</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="1">
+            <div class="dropdown3" data-index="1">
                 <button id="intervalos-2" onclick="activarSecuencia(1)">2</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="2">
+            <div class="dropdown3" data-index="2">
                 <button id="intervalos-3" onclick="activarSecuencia(2)">3</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="3">
+            <div class="dropdown3" data-index="3">
                 <button id="intervalos-4" onclick="activarSecuencia(3)">4</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="4">
+            <div class="dropdown3" data-index="4">
                 <button id="intervalos-5" onclick="activarSecuencia(4)">5</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="5">
+            <div class="dropdown3" data-index="5">
                 <button id="intervalos-6" onclick="activarSecuencia(5)">6</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="6">
+            <div class="dropdown3" data-index="6">
                 <button id="intervalos-7" onclick="activarSecuencia(6)">7</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="7">
+            <div class="dropdown3" data-index="7">
                 <button id="intervalos-8" onclick="activarSecuencia(7)">8</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="8">
+            <div class="dropdown3" data-index="8">
                 <button id="intervalos-9" onclick="activarSecuencia(8)">9</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
 
-            <div class="dropdown2" data-index="9">
+            <div class="dropdown3" data-index="9">
                 <button id="intervalos-10" onclick="activarSecuencia(9)">10</button>
-                <div class="dropdown-content2">
-                    <button data-grado="2M" onclick="seleccionarGrado(event, '2M')">2da Mayor</button>
-                    <button data-grado="2m" onclick="seleccionarGrado(event, '2m')">2da Menor</button>
-                    <button data-grado="3M" onclick="seleccionarGrado(event, '3M')">3ra Mayor</button>
-                    <button data-grado="3m" onclick="seleccionarGrado(event, '3m')">3ra Menor</button>
-                    <button data-grado="4J" onclick="seleccionarGrado(event, '4J')">4ta Justa</button>
-                    <button data-grado="5J" onclick="seleccionarGrado(event, '5J')">5ta Justa</button>
-                    <button data-grado="6M" onclick="seleccionarGrado(event, '6M')">6ta Mayor</button>
-                    <button data-grado="6m" onclick="seleccionarGrado(event, '6m')">6ta Menor</button>
-                    <button data-grado="7M" onclick="seleccionarGrado(event, '7M')">7ma Mayor</button>
-                    <button data-grado="7m" onclick="seleccionarGrado(event, '7m')">7ma Menor</button>
-                    <button data-grado="8J" onclick="seleccionarGrado(event, '8J')">8va Justa</button>
+                <div class="dropdown-content3">
+                    <button data-grado="2M" onclick="seleccionarGradoIntervalo(event, '2M')">2da Mayor</button>
+                    <button data-grado="2m" onclick="seleccionarGradoIntervalo(event, '2m')">2da Menor</button>
+                    <button data-grado="3M" onclick="seleccionarGradoIntervalo(event, '3M')">3ra Mayor</button>
+                    <button data-grado="3m" onclick="seleccionarGradoIntervalo(event, '3m')">3ra Menor</button>
+                    <button data-grado="4J" onclick="seleccionarGradoIntervalo(event, '4J')">4ta Justa</button>
+                    <button data-grado="5J" onclick="seleccionarGradoIntervalo(event, '5J')">5ta Justa</button>
+                    <button data-grado="6M" onclick="seleccionarGradoIntervalo(event, '6M')">6ta Mayor</button>
+                    <button data-grado="6m" onclick="seleccionarGradoIntervalo(event, '6m')">6ta Menor</button>
+                    <button data-grado="7M" onclick="seleccionarGradoIntervalo(event, '7M')">7ma Mayor</button>
+                    <button data-grado="7m" onclick="seleccionarGradoIntervalo(event, '7m')">7ma Menor</button>
+                    <button data-grado="8J" onclick="seleccionarGradoIntervalo(event, '8J')">8va Justa</button>
                 </div>
             </div>
         </div>

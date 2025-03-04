@@ -1,4 +1,3 @@
-// Definición de noteFiles (centralizada)
 const noteFiles = {
     'DO-3': './Sounds/DO-3.wav',
     'DO-sostenido-3': './Sounds/DO-sostenido-3.wav',
@@ -154,7 +153,7 @@ function getGradosSeleccionados() {
 function generarSecuenciaAleatoria(gradosSeleccionados) {
     const secuencia = [];
     for (let i = 0; i < maxIntentos; i++) {
-        const gradoAleatorio = gradosSeleccionados[Math.floor(Math.random() * gradosSeleccionados.length)];
+        const gradoAleatorio = gradosSeleccionados [Math.floor(Math.random() * gradosSeleccionados.length)];
         secuencia.push(gradoAleatorio);
     }
     return secuencia;
@@ -274,7 +273,7 @@ function verificarTareaIntervalos() {
 
 function seleccionarGradoIntervalo(event, grado) {
     const botonSeleccionado = event.target;
-    const dropdown = botonSeleccionado.closest('.dropdown2');
+    const dropdown = botonSeleccionado.closest('.dropdown3');
     const indiceSecuencia = parseInt(dropdown.dataset.index);
 
     respuestasUsuario[indiceSecuencia] = grado;
