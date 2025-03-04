@@ -1,43 +1,234 @@
+:root {
+    --primary-color: #5b7594;
+    --secondary-color: #404040;
+    --background-color: #c2c3c3;
+    --color-green: #37ff00;
+    --color-red: #ff0000;
+    --color-button: #fdffff;
+    --color-black: #000;
+    --button-bg: var(--primary-color);
+    --button-hover-bg: var(--secondary-color);
+    --dropdown-bg: var(--primary-color);
+    --dropdown-link-color: #000;
+    --dropdown-link-hover-color: #fff;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     margin: 0;
     padding: 20px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh; /* Asegura que el footer esté siempre abajo */
 }
 
-/* Encabezado */
+.content-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Permite que el contenido principal crezca */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.chord-buttons-exe {
+    border: 2px solid #007bff;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    background-color: var(--button-bg);
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.dropdown2 {
+    display: inline-block;
+    position: relative;
+    width: 150px; /* Ancho fijo para los dropdowns */
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    z-index: 10; /* Asegura que el dropdown esté encima de otros elementos */
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.dropdown-content2 button {
+    display: block;
+    color: var(--dropdown-link-color);
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--dropdown-bg);
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-content2 button:hover {
+    color: var(--dropdown-link-hover-color);
+    background-color: var(--button-hover-bg);
+}
+
+#opciones {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-container label {
+    margin: 0 10px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    width: 200px; /* Ancho fijo para los dropdowns */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: var(--dropdown-link-color);
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--dropdown-bg);
+}
+
+.dropdown-content a:hover {
+    color: var(--dropdown-link-hover-color);
+    background-color: var(--button-hover-bg);
+}
+
+.piano {
+    display: flex;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.white-key, .black-key {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.white-key {
+    width: 60px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.white-key:active {
+    background-color: #eee;
+}
+
+.black-key {
+    width: 40px;
+    height: 150px;
+    background-color: black;
+    border: 1px solid #333;
+    margin-left: -20px;
+    margin-right: -20px;
+    z-index: 1;
+    position: relative;
+}
+
+.black-key:active {
+    background-color: #333;
+}
+
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
 }
+
+#search, #category {
+    width: 90%;
+    max-width: 500px; /* Ancho máximo fijo */
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-color);
+}
+
 .nav {
-    display: block;
-    max-width: 800px;
-    width: 90%;
-    margin: 0 auto 20px auto;
-    padding: 10px;
     border: 2px solid #007bff;
-    border-radius: 4px;
-    font-size: 16px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
 }
 
-/* Input de búsqueda */
-#search {
-    display: block;
-    max-width: 800px;
+.bloques {
     width: 90%;
-    margin: 0 auto 20px auto;
-    padding: 10px;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    font-size: 16px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor de libros */
+.bloques-nav {
+    display: flex;
+    width: 100%;
+    gap: 30px; /* Reducción del gap */
+}
+
 .book-list {
     display: flex;
     flex-wrap: wrap;
@@ -45,9 +236,8 @@ h1 {
     gap: 20px;
 }
 
-/* Tarjeta de libro */
 .book {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 100%;
@@ -63,14 +253,12 @@ h1 {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Título del libro */
 .book h2 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
 }
 
-/* Enlace para leer */
 .book a {
     text-decoration: none;
     color: #007bff;
@@ -83,121 +271,83 @@ h1 {
 }
 
 #logo {
-    border-radius: 100%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    width: 100%;
 }
 
-/* Responsive: Vista en pantallas pequeñas */
+footer {
+    text-shadow: 0 2px 3px black;
+    background: #7b7b7d68;
+    text-align: center;
+    color: #333;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.switch-button {
+    display: inline-block;
+}
+
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+
+.switch-button .switch-button__label {
+    background-color: var(--color-red);
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+    left: 75px;
+    top: 10px;
+}
+
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px var(--color-black);
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: var(--color-green);
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(2rem);
+}
+
 @media (max-width: 768px) {
     .book-list {
         flex-direction: column;
         align-items: center;
     }
-    
-    #search, #category {
-        width: 100%;
-        max-width: 500px;
-    }
 
-    .nav {
-        width: 100%;
-        max-width: 500px;
-    }
-}
-
-@media (max-width: 480px) {
-    .book {
-        width: 100%;
-        max-width: 300px;
-        padding: 15px;
-    }
-    
-    h1 {
-        font-size: 24px;
-    }
-}
-
-#category {
-    display: block;
-    max-width: 800px;
-    width: 90%;
-    margin: 0 auto 20px auto;
-    padding: 10px;
-    border: 2px solid #28a745;
-    border-radius: 4px;
-    font-size: 16px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    text-shadow: 0px 2px 3px black;
-    background: #7b7b7d68;
-    background-size: cover;
-    width: 100%;
-    height: 100px;
-    margin-top: 1%;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-
-/* Ajuste de la búsqueda y el filtro en pantallas pequeñas */
-@media (max-width: 768px) {
-    #category, #search {
+    #search, #category, .nav {
         width: 100%;
         max-width: 500px;
     }
 
     body {
-
         justify-content: center;
-        align-items: center;
-        background-color: #f0f0f0;
     }
 
-    .logo-container {
-        opacity: 0; /* Comenzar oculto */
-    }
-}
-#logo {
-    border-radius: 100%;
-    display: block; /* Asegura que el logo sea visible */
-    margin: 0 auto; /* Centra el logo */
-    max-width: 150px; /* Ajusta el tamaño máximo en pantallas pequeñas */
-    width: 100%;
-}
-
-/* Responsive: Vista en pantallas pequeñas */
-@media (max-width: 768px) {
-
-    #category, #search {
-        width: 80%;
-        max-width: 500px;
-    }
-.book-list{
-    width: 90%;
-    max-width: 500px;
-}
-
-    body {
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
-        background-color: #f0f0f0;
-
+    .bloques-nav {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .logo-container {
-        opacity: 1; /* Asegura que sea visible en pantallas móviles */
+    .dropdown {
+        width: 100%;
     }
-
-    #logo {
-        max-width: 100px; /* Ajusta el tamaño del logo para móviles */
-        width: 80%; /* Ajusta la anchura para que se vea bien en móviles */
-    }
-}
-.nav {
-    width: 80%;
-    max-width: 500px;
 }

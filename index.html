@@ -1,64 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Virtual</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Piano Interactivo</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
 </head>
-
 <body>
     <header>
-        <nav class="nav"> 
-      
-            <a href="./libreria.html">
-                <div class="btn">
-                    <strong>Home</strong>
-                    <div class="container-stars">
-                       
-                      <div class="stars"></div>
-       
+        <section>
+            <h1>Biblioteca Virtual Escuela de Música J.J. Urquiza</h1>
+            <div class="logo-container">
+                <img src="./images/images.jpeg" alt="logo" id="logo">
+            </div>
+            <h1>Sistema Torcaza</h1>
+            <nav class="nav">
+                <div class="bloques-nav">
+                    <div class="dropdown">
+                        <button>Inicio</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
+                            <a href="sinay.html">Sinay</a>
+                            <a href="urbano_y_yuni.html">Urbay Yuni</a>
+                            <a href="cespedes.html">Céspedes</a>
+                        </div>
                     </div>
-                    <div class="glow">
-                      <div class="circle"></div>
-                      <div class="circle"></div>
-                    </div></div></a>
-        <h1>Biblioteca Virtual Escuela de Música J.J. Urquiza</h1>
-        <div class="logo-container">
-            <img src="images/images.jpeg" alt="logo" id="logo">
-        </div>
-       </nav>
+                    <div class="dropdown">
+                        <button>Apuntes</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
+                            <a href="sinay.html">Sinay</a>
+                            <a href="urbano_y_yuni.html">Urbay Yuni</a>
+                            <a href="cespedes.html">Céspedes</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
     </header>
     <main>
-
-        <br>
-        <!-- Filtro de categorías -->
-        <label for="category"></label>
-        <select action="./libreria.html" method="GET" id="category" onchange="filterByCategory()">
-            <option value="all">Todas las categorías</option>
-            <option value="Guitarra">Guitarra</option>
-            <option value="Lenguaje Musical">Lenguaje Musical</option>
-            <option value="Percusion">Percusion</option>
-            <option value="Piano">Piano</option>
-        </select>
-
-        <!-- Cuadro de búsqueda -->
-<form action="./libreria.html" method="GET">
-    <input type="text" id="search" name="query" placeholder="Buscar un libro...">
-    <button type="submit">Buscar</button>
-</form>
-
-
+        <section class="bloques">
+            <h2>----------Busqueda de la Biblioteca----------</h2>
+            <label for="category"></label>
+            <select id="category">
+                <option value="all">Todas las categorías</option>
+                <option value="Guitarra">Guitarra</option>
+                <option value="Lenguaje Musical">Lenguaje Musical</option>
+                <option value="Percusion">Percusion</option>
+                <option value="Piano">Piano</option>
+            </select>
+            <form action="./libreria.html" method="GET">
+                <input type="text" id="search" name="query" placeholder="Buscar un libro...">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
     </main>
+    <br>
+    <section class="bloques">
+        <h2>PIANO INTERACTIVO</h2>
+        <p>Ejercicio de escucha</p>
+        <div class="piano">
+            <div class="white-key" data-note="DO-4"></div>
+            <div class="black-key" data-note="DO-sostenido-4"></div>
+            <div class="white-key" data-note="RE-4"></div>
+            <div class="black-key" data-note="RE-sostenido-4"></div>
+            <div class="white-key" data-note="MI-4"></div>
+            <div class="white-key" data-note="FA-4"></div>
+            <div class="black-key" data-note="FA-sostenido-4"></div>
+            <div class="white-key" data-note="SOL-4"></div>
+            <div class="black-key" data-note="SOL-sostenido-4"></div>
+            <div class="white-key" data-note="LA-4"></div>
+            <div class="black-key" data-note="LA-sostenido-4"></div>
+            <div class="white-key" data-note="SI-4"></div>
+            <div class="white-key" data-note="DO-5"></div>
+        </div>
+        <button id="play-random-note">Nota al Azar</button>
+        <button id="repeat-note">Repetir Nota</button>
+        <div id="toggle-exercise" class="switch-button">
+            <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+            <label for="switch-label" class="switch-button__label"></label>
+        </div>
+        <div>
+            <p>Se puede activar y desactivar el ejercicio para usar solo el piano si lo desea</p>
+        </div>
+    </section>
+
+    <div class="chord-buttons">
+        <h2>Reproducir Acordes partiendo de la tonalidad DO MAYOR como I° Grado</h2>
+        <button onclick="playDOmayor()">C Mayor (I)</button>
+        <button onclick="playREmenor()">D Menor (II)</button>
+        <button onclick="playMImenor()">E Menor (III)</button>
+        <button onclick="playFAMAYOR()">F Mayor (IV)</button>
+        <button onclick="playSOLMAYOR()">G Mayor (V)</button>
+        <button onclick="playLAmenor()">A Menor (VI)</button>
+        <button onclick="playSIdisminuido()">B Disminuido (VII)</button>
+    </div>
+    <h2>Probemos Ejercitar la escucha activa</h2>
+
+    <div id="grados">
+        <label><input type="checkbox" value="I"> DO Mayor (I)</label>
+        <label><input type="checkbox" value="II"> RE Menor (II)</label>
+        <label><input type="checkbox" value="III"> MI Menor (III)</label>
+        <label><input type="checkbox" value="IV"> FA Mayor (IV)</label>
+        <label><input type="checkbox" value="V"> SOL Mayor (V)</label>
+        <label><input type="checkbox" value="VI"> LA Menor (VI)</label>
+        <label><input type="checkbox" value="VII"> SI Disminuido (VII)</label>
+    </div>
+
+    <h2>ejercitacion auditiva</h2>
+
+    <div id="opciones" class="chord-buttons-exe">
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(0)">secuencia 1</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(1)">secuencia 2</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+    
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(2)">secuencia 3</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+
+       
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(3)">secuencia 4</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+        
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(4)">secuencia 5</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(5)">secuencia 6</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(6)">secuencia 7</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(7)">secuencia 8</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+
+        <div class="dropdown2" data-index="0">
+            <button onclick="activarSecuencia(8)">secuencia 9</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(0, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(0, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(0, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(0, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(0, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+
+        <div class="dropdown2" data-index="9">
+            <button onclick="activarSecuencia(9)">secuencia 10</button>
+            <div class="dropdown-content2">
+                <button data-grado="I" onclick="seleccionarGrado(9, 'I')">C Mayor (I)</button>
+                <button data-grado="II" onclick="seleccionarGrado(9, 'II')">D Menor (II)</button>
+                <button data-grado="III" onclick="seleccionarGrado(9, 'III')">E Menor (III)</button>
+                <button data-grado="IV" onclick="seleccionarGrado(9, 'IV')">F Mayor (IV)</button>
+                <button data-grado="V" onclick="seleccionarGrado(9, 'V')">G Mayor (V)</button>
+                <button data-grado="VI" onclick="seleccionarGrado(9, 'VI')">A Menor (VI)</button>
+                <button data-grado="VII" onclick="seleccionarGrado(9, 'VII')">B Disminuido (VII)</button>
+            </div>
+        </div>
+    </div>
+    <button onclick="iniciarEjercicio()">Iniciar Ejercicio</button>
+
+    <div id="resultado"></div>
+    <button onclick="repetirSecuencia()">Repetir Secuencia</button>
+    <button onclick="verificarTarea()">Entregar Tarea</button>
+   
     <footer>
-        <p class="derechos"> ®Desing by: Angel Perla <a href=""></a></p>
+        <p class="derechos">®Desing by: Angel Perla <a href="#"></a></p>
     </footer>
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js">
-    </script>-->
-    <script src="script.js"></script>
 
+    <script src="/script.js"></script>
+    <script src="/animation.js"></script>
+    <script src="/chords.js"></script>
+    <script src="/library.js"></script>
+    <script src="/piano.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
 </body>
 
 </html>
