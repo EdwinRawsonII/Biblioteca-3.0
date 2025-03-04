@@ -80,60 +80,99 @@
         </section>
     </header>
     <main>
-
-        <br>
-             <!-- Filtro de categorías -->
-             <label for="category"></label>
-             <select action="./libreria.html" method="GET" id="category" onchange="filterByCategory()">
-                 <option value="all">Todas las categorías</option>
-                 <option value="Guitarra">Guitarra</option>
-                 <option value="Lenguaje Musical">Lenguaje Musical</option>
-                 <option value="Percusion">Percusion</option>
-                 <option value="Piano">Piano</option>
-             </select>
-     
-             <!-- Cuadro de búsqueda -->
-     <form action="./libreria.html" method="GET">
-         <input type="text" id="search" name="query" placeholder="Buscar un libro...">
-         <button type="submit">Buscar</button>
-     </form>
-        <div class="book-list" id="book-list">
-            <div class="book" data-title="1° Primer Album Cecilia" data-category="Piano">
-                <h2>1° Primer Album Cecilia</h2>
-                <p><a href="https://drive.google.com/file/d/1tEvrwfr1EWh_QMt_53C9hnWTxz87JxC7/view?usp=drive_link"
-                        target="_blank">Leer</a></p>
-            </div>
-            <div class="book" data-title="2° Segundo Album Cecilia" data-category="Piano">
-                <h2>2° Segundo Album Cecilia</h2>
-                <p><a href="https://drive.google.com/file/d/1fcV5yOYkitvZcqMrZFJ57znbO65DUOBQ/view?usp=drive_link"
-                        target="_blank">Leer</a></p>
-            </div>
-            <div class="book" data-title="F. Beyer - op. 101" data-category="Piano">
-                <h2>F. Beyer op. 101</h2>
-                <p><a href="https://drive.google.com/file/d/1fO3bkqwbRjA41lJcryXbdbDopjlhSFOv/view?usp=drive_link" target="_blank">Leer</a></p>
-            </div>
-            <div class="book" data-title="Rosatti - cartilla estudios del 1 al 29" data-category="Guitarra">
-                <h2>Rosatti cartilla estudios del 1 al 29</h2>
-                <p><a href="https://drive.google.com/file/d/1oGXZt9SuNso_cfFW90OKO-hNNwZKR8c8/view?usp=drive_link"
-                        target="_blank">Leer</a></p>
-            </div>
-            <div class="book" data-title="Panorama Inicial - Cesar Amaro" data-category="Guitarra">
-                <h2>Panorama Inicial Cesar Amaro</h2>
-                <p><a href="https://drive.google.com/file/d/1NNMLZlbRBxt_VaWkTHLz1Xd_1LJUIUDo/view?usp=drive_link"
-                        target="_blank">Leer</a></p>
-            </div>
-            <div class="book" data-title="Las primeras lecciones de guitarra - Julio Sagreras" data-category="Guitarra">
-                <h2>Las primeras lecciones de guitarra - Julio Sagreras</h2>
-                <p><a href="https://drive.google.com/file/d/12A6h_vcZDZh1_ul8zENfdlpKgveiTAOF/view?usp=drive_link" target="_blank">Leer</a></p>
-            </div>
-            <div class="book" data-title="Cuadernillo Lenguaje Musical I y II" data-category="Lenguaje Musical">
-                <h2>Cuadernillo Lenguaje Musical I y II</h2>
-                <p><a href="https://drive.google.com/file/d/1rn-QNUnYpvGRv3MPIMoOZUe5IqQfQC-G/view?usp=drive_link"
-                        target="_blank">Leer</a></p>
-            </div>
-            
-        </div>
+        <section class="bloques">
+            <h2>----------Busqueda de la Biblioteca----------</h2>
+            <label for="category"></label>
+            <select id="category">
+                <option value="all">Todas las categorías</option>
+                <option value="Guitarra">Guitarra</option>
+                <option value="Lenguaje Musical">Lenguaje Musical</option>
+                <option value="Percusion">Percusion</option>
+                <option value="Piano">Piano</option>
+            </select>
+            <form action="./libreria.html" method="GET">
+                <input type="text" id="search" name="query" placeholder="Buscar un libro...">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
     </main>
+    <br>
+    <div id="metronomo">
+        <label for="tempo">Tempo (BPM):</label>
+        <input type="number" id="tempo" value="120">
+        <button id="iniciar">Iniciar</button>
+        <button id="detener">Detener</button>
+    </div>
+
+
+    <section class="">
+  
+   
+    <h1>Ejercicios Rítmicos Musicales</h1>
+
+    <div id="sonido-percusion">
+        <label>Seleccionar sonido de percusión</label>
+        <div id="grados3" class="check">
+            <label class="custom-checkbox">
+                <input type="radio" name="percusion" value="DO-3">Piano
+            </label>
+            <label class="custom-checkbox">
+                <input type="radio" name="percusion" value="stick">Palillos
+            </label>
+            <label class="custom-checkbox">
+                <input type="radio" name="percusion" value="bombo">Bombo
+            </label>
+            <label class="custom-checkbox">
+                <input type="radio" name="percusion" value="timbre">Timbre
+            </label>
+            <label class="custom-checkbox">
+                <input type="radio" name="percusion" value="Beep">Beep
+            </label>
+            <label class="custom-checkbox">
+                <input type="radio" name="percusion" value="Redoblante">Redoblante
+            </label>
+    </div>
+
+    <div id="compas-seleccion">
+        <label> Seleccionar Compás</label>
+        <div id="grados4" class="check">
+            <label class="custom-checkbox"><input type="radio" name="compas" value="2/4">2/4</label>
+            <label class="custom-checkbox"><input type="radio" name="compas" value="3/4">3/4</label>
+            <label class="custom-checkbox"><input type="radio" name="compas" value="4/4">4/4</label>
+            <label class="custom-checkbox"><input type="radio" name="compas" value="6/8">6/8</label>
+            <label class="custom-checkbox"><input type="radio" name="compas" value="9/8">9/8</label>
+            <label class="custom-checkbox"><input type="radio" name="compas" value="12/8">12/8</label>
+        </div>
+    </div>
+
+    <div id="ritmo-container">
+        <h2>Patrones Rítmicos</h2>
+        <select id="ritmo-selector">
+            <option value="negras">Negras</option>
+            <option value="corcheas">Corcheas</option>
+            <option value="ritmo1">Ritmo 1</option>
+            <option value="ritmo2">Ritmo 2</option>
+        </select>
+    </div>
+
+    <div id="acordes-container">
+        <h2>Acordes</h2>
+        <button id="tocar-acorde">Tocar Acorde con Ritmo</button>
+    </div>
+
+    <div id="intervalos-container">
+        <h2>Intervalos</h2>
+        <button id="tocar-intervalo">Tocar Intervalo con Ritmo</button>
+    </div>
+
+    <div id="ejercicio-container">
+        <h2>Ejercicio Rítmico</h2>
+        <div id="ejercicio-secciones"></div>
+        <button id="verificar-ejercicio">Verificar Ejercicio</button>
+        <div id="resultado-ejercicio"></div>
+    </div>
+
+    </section>
     <br>
     <br>
     <br>
@@ -148,6 +187,7 @@
     <script src="/library.js"></script>
     <script src="/piano.js"></script>
     <script src="/intervalos.js"></script>
+    <script src="./ritmo.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
