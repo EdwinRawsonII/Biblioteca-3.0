@@ -4,7 +4,7 @@ const playRandomNoteButton = document.getElementById('play-random-note');
 const repeatNoteButton = document.getElementById('repeat-note');
 const toggleExerciseButton = document.getElementById('switch-label');
 
-const notes = ['DO4', 'DO-sostenido-4', 'RE-4', 'RE-sostenido-4', 'MI-4', 'FA-4', 'FA-sostenido-4', 'SOL-4', 'SOL-sostenido-4', 'LA-4', 'LA-sostenido-4', 'SI-4', 'DO-5'];
+const notes = ['DO3', 'DO-sostenido-3', 'RE-3', 'RE-sostenido-3', 'MI-3', 'FA-3', 'FA-sostenido-3', 'SOL-3', 'SOL-sostenido-3', 'LA-3', 'LA-sostenido-3', 'SI-3','DO4', 'DO-sostenido-4', 'RE-4', 'RE-sostenido-4', 'MI-4', 'FA-4', 'FA-sostenido-4', 'SOL-4', 'SOL-sostenido-4', 'LA-4', 'LA-sostenido-4', 'SI-4', 'DO-5', 'DO-sostenido-5', 'RE-5', 'RE-sostenido-5', 'MI-5', 'FA-5', 'FA-sostenido-5', 'SOL-5', 'SOL-sostenido-5', 'LA-5', 'LA-sostenido-5', 'SI-5', 'DO-6'];
 let currentNote = null;
 let lastPlayedNote = null;
 let exerciseActive = true;

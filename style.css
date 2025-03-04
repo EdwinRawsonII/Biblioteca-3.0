@@ -24,7 +24,9 @@ body {
     box-sizing: border-box;
     min-height: 100vh; /* Asegura que el footer esté siempre abajo */
 }
-
+.importante{
+color: var(--color-red);
+}
 .content-wrapper {
     width: 100%;
     max-width: 1200px; /* Ancho máximo para el contenido */
@@ -47,6 +49,27 @@ header {
     border: 2px solid #007bff;
     display: flex;
     flex-direction: row;
+}
+
+#opciones {
+    display: flex;
+    width: 75%;
+    border-radius: 5px;
+}
+
+#grados{
+display: flex;
+justify-content: space-around;
+width: 90%;
+background-color: #40404065;
+padding: 10px 20px;
+font-size: 16px;
+margin: 1px;
+border: none;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+transition: background-color 0.2s ease;
 }
 
 button {
@@ -102,11 +125,6 @@ button:hover {
     background-color: var(--button-hover-bg);
 }
 
-#opciones {
-    display: flex;
-    width: 100%;
-    gap: 30px;
-}
 
 .checkbox-container {
     display: flex;
@@ -215,7 +233,7 @@ h1 {
 
 .bloques {
     width: 90%;
-    max-width: 800px;
+    max-width: auto;
     margin: 2rem auto;
     padding: 1rem;
     background: #fff;

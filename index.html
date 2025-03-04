@@ -22,18 +22,48 @@
                         <button>Inicio</button>
                         <div class="dropdown-content">
                             <a href="shaffer.html">Shaffer</a>
-                            <a href="sinay.html">Sinay</a>
-                            <a href="urbano_y_yuni.html">Urbay Yuni</a>
-                            <a href="cespedes.html">Céspedes</a>
                         </div>
                     </div>
                     <div class="dropdown">
                         <button>Apuntes</button>
                         <div class="dropdown-content">
                             <a href="shaffer.html">Shaffer</a>
-                            <a href="sinay.html">Sinay</a>
-                            <a href="urbano_y_yuni.html">Urbay Yuni</a>
-                            <a href="cespedes.html">Céspedes</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Inicio</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Apuntes</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Inicio</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Apuntes</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Inicio</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Apuntes</button>
+                        <div class="dropdown-content">
+                            <a href="shaffer.html">Shaffer</a>
                         </div>
                     </div>
                 </div>
@@ -62,6 +92,18 @@
         <h2>PIANO INTERACTIVO</h2>
         <p>Ejercicio de escucha</p>
         <div class="piano">
+            <div class="white-key" data-note="DO-3"></div>
+            <div class="black-key" data-note="DO-sostenido-3"></div>
+            <div class="white-key" data-note="RE-3"></div>
+            <div class="black-key" data-note="RE-sostenido-3"></div>
+            <div class="white-key" data-note="MI-3"></div>
+            <div class="white-key" data-note="FA-3"></div>
+            <div class="black-key" data-note="FA-sostenido-3"></div>
+            <div class="white-key" data-note="SOL-3"></div>
+            <div class="black-key" data-note="SOL-sostenido-3"></div>
+            <div class="white-key" data-note="LA-3"></div>
+            <div class="black-key" data-note="LA-sostenido-3"></div>
+            <div class="white-key" data-note="SI-3"></div>
             <div class="white-key" data-note="DO-4"></div>
             <div class="black-key" data-note="DO-sostenido-4"></div>
             <div class="white-key" data-note="RE-4"></div>
@@ -75,6 +117,18 @@
             <div class="black-key" data-note="LA-sostenido-4"></div>
             <div class="white-key" data-note="SI-4"></div>
             <div class="white-key" data-note="DO-5"></div>
+            <div class="black-key" data-note="DO-sostenido-5"></div>
+            <div class="white-key" data-note="RE-5"></div>
+            <div class="black-key" data-note="RE-sostenido-5"></div>
+            <div class="white-key" data-note="MI-5"></div>
+            <div class="white-key" data-note="FA-5"></div>
+            <div class="black-key" data-note="FA-sostenido-5"></div>
+            <div class="white-key" data-note="SOL-5"></div>
+            <div class="black-key" data-note="SOL-sostenido-5"></div>
+            <div class="white-key" data-note="LA-5"></div>
+            <div class="black-key" data-note="LA-sostenido-5"></div>
+            <div class="white-key" data-note="SI-5"></div>
+            <div class="white-key" data-note="DO-6"></div>
         </div>
         <button id="play-random-note">Nota al Azar</button>
         <button id="repeat-note">Repetir Nota</button>
@@ -84,9 +138,10 @@
         </div>
         <div>
             <p>Se puede activar y desactivar el ejercicio para usar solo el piano si lo desea</p>
+            <h3 class="importante">*Desactivar el pianito para realizar los ejercicios!!!.</h3>
         </div>
     </section>
-
+    <section class="bloques">
     <div class="chord-buttons">
         <h2>Reproducir Acordes partiendo de la tonalidad DO MAYOR como I° Grado</h2>
         <button onclick="playDOmayor()">C Mayor (I)</button>
@@ -97,7 +152,10 @@
         <button onclick="playLAmenor()">A Menor (VI)</button>
         <button onclick="playSIdisminuido()">B Disminuido (VII)</button>
     </div>
+    </section>
+    <section class="bloques">
     <h2>Probemos Ejercitar la escucha activa</h2>
+    <h3>Seleccione los grados a entrenar</h3>
 
     <div id="grados">
         <label><input type="checkbox" value="I"> DO Mayor (I)</label>
@@ -109,11 +167,17 @@
         <label><input type="checkbox" value="VII"> SI Disminuido (VII)</label>
     </div>
 
-    <h2>ejercitacion auditiva</h2>
+    <h3>Comience a reproducir</h3>
+    <button onclick="iniciarEjercicio()">Iniciar Ejercicio</button>
+
+    <div id="resultado"></div>
+    <button onclick="repetirSecuencia()">Repetir Secuencia</button>
+    <button onclick="verificarTarea()">Entregar Tarea</button>
+   <h3>Selecione los grados que escuchó</h3>
 
     <div id="opciones" class="chord-buttons-exe">
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(0)">secuencia 1</button>
+            <button onclick="activarSecuencia(0)">1</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(0, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(0, 'II')">D Menor (II)</button>
@@ -126,7 +190,7 @@
         </div>
 
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(1)">secuencia 2</button>
+            <button onclick="activarSecuencia(1)">2</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(1, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(1, 'II')">D Menor (II)</button>
@@ -139,7 +203,7 @@
         </div>
     
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(2)">secuencia 3</button>
+            <button onclick="activarSecuencia(2)">3</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(2, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(2, 'II')">D Menor (II)</button>
@@ -153,7 +217,7 @@
 
        
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(3)">secuencia 4</button>
+            <button onclick="activarSecuencia(3)">4</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(3, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(3, 'II')">D Menor (II)</button>
@@ -166,7 +230,7 @@
         </div>
         
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(4)">secuencia 5</button>
+            <button onclick="activarSecuencia(4)">5</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(4, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(4, 'II')">D Menor (II)</button>
@@ -179,7 +243,7 @@
         </div>
 
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(5)">secuencia 6</button>
+            <button onclick="activarSecuencia(5)">6</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(5, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(5, 'II')">D Menor (II)</button>
@@ -192,7 +256,7 @@
         </div>
 
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(6)">secuencia 7</button>
+            <button onclick="activarSecuencia(6)">7</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(6, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(6, 'II')">D Menor (II)</button>
@@ -205,7 +269,7 @@
         </div>
 
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(7)">secuencia 8</button>
+            <button onclick="activarSecuencia(7)">8</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(7, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(7, 'II')">D Menor (II)</button>
@@ -218,7 +282,7 @@
         </div>
 
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(8)">secuencia 9</button>
+            <button onclick="activarSecuencia(8)">9</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(8, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(8, 'II')">D Menor (II)</button>
@@ -231,7 +295,7 @@
         </div>
 
         <div class="dropdown2" data-index="0">
-            <button onclick="activarSecuencia(9)">secuencia 10</button>
+            <button onclick="activarSecuencia(9)">10</button>
             <div class="dropdown-content2">
                 <button data-grado="I" onclick="seleccionarGrado(9, 'I')">C Mayor (I)</button>
                 <button data-grado="II" onclick="seleccionarGrado(9, 'II')">D Menor (II)</button>
@@ -243,12 +307,7 @@
             </div>
         </div>
     </div>
-    <button onclick="iniciarEjercicio()">Iniciar Ejercicio</button>
-
-    <div id="resultado"></div>
-    <button onclick="repetirSecuencia()">Repetir Secuencia</button>
-    <button onclick="verificarTarea()">Entregar Tarea</button>
-   
+    </section>
     <footer>
         <p class="derechos">®Desing by: Angel Perla <a href="#"></a></p>
     </footer>
