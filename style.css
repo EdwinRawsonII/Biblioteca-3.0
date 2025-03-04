@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #5b7594;
     --secondary-color: #404040;
@@ -22,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    min-height: 100vh; /* Asegura que el footer esté siempre abajo */
+    min-height: 100vh;
 }
 .importante{
 color: var(--color-red);
@@ -56,7 +57,21 @@ header {
     width: 75%;
     border-radius: 5px;
 }
-
+.check{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    background-color: #40404065;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 1px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+}
 #grados{
 display: flex;
 justify-content: space-around;
@@ -91,7 +106,8 @@ button:hover {
 .dropdown2 {
     display: inline-block;
     position: relative;
-    width: 150px; /* Ancho fijo para los dropdowns */
+    width: 100%; /* Ancho fijo para los dropdowns */
+    border-radius: 10px;
 }
 
 .dropdown-content2 {
@@ -106,6 +122,8 @@ button:hover {
 
 .dropdown2:hover .dropdown-content2 {
     display: block;
+    width: 200%;
+    border-radius: 10px;
 }
 
 .dropdown-content2 button {
@@ -123,6 +141,7 @@ button:hover {
 .dropdown-content2 button:hover {
     color: var(--dropdown-link-hover-color);
     background-color: var(--button-hover-bg);
+  
 }
 
 
@@ -291,11 +310,19 @@ h1 {
 #logo {
     border-radius: 50%;
     display: block;
+    top: 20px;
     margin: 0 auto;
     max-width: 150px;
     width: 100%;
 }
+.tacuara{
+    align-items: center;
+}
+.image-tacuara{
+    max-width: 30%;
+    height: auto;
 
+}
 footer {
     text-shadow: 0 2px 3px black;
     background: #7b7b7d68;
@@ -368,4 +395,52 @@ footer {
     .dropdown {
         width: 100%;
     }
+}
+
+
+/* ... (resto del CSS) ... */
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 769px) {
+    .piano {
+        width: auto; /* El piano ocupa su ancho original */
+    }
+
+    .white-key {
+        width: 60px; /* Restaura el ancho original */
+        height: 250px; /* Restaura la altura original */
+    }
+
+    .black-key {
+        width: 40px; /* Restaura el ancho original */
+        height: 150px; /* Restaura la altura original */
+        margin-left: -20px; /* Restaura el margen original */
+        margin-right: -20px; /* Restaura el margen original */
+    }
+
+    .chord-buttons-exe {
+        flex-direction: row; /* Vuelve a la disposición horizontal */
+        align-items: flex-start; /* Alinea los botones a la izquierda */
+    }
+
+    #opciones {
+        width: 75%; /* Restaura el ancho original */
+    }
+
+    .dropdown2 {
+        width: 100%; /* Restaura el ancho original */
+    }
+
+    nav {
+        flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    }
+
+    .bloques-nav {
+        flex-direction: row; /* Vuelve a la disposición horizontal */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* ... (tu CSS para pantallas pequeñas) ... */
 }
