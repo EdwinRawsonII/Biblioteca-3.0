@@ -9,7 +9,7 @@ const noteFiles = {
     'SOL-3': './Sounds/SOL-3.wav',
     'SOL-sostenido-3': './Sounds/SOL-sostenido-3.wav',
     'LA-3': './Sounds/LA-3.wav',
-    'LA-sostenido-3': './Sounds/LA-3.wav',
+    'LA-sostenido-3': './Sounds/LA-sostenido-3.wav',
     'SI-3': './Sounds/SI-3.wav',
     'DO-4': './Sounds/DO-4.wav',
     'DO-sostenido-4': './Sounds/DO-sostenido-4.wav',
@@ -21,7 +21,7 @@ const noteFiles = {
     'SOL-4': './Sounds/SOL-4.wav',
     'SOL-sostenido-4': './Sounds/SOL-sostenido-4.wav',
     'LA-4': './Sounds/LA-4.wav',
-    'LA-sostenido-4': './Sounds/LA-4.wav',
+    'LA-sostenido-4': './Sounds/LA-sostenido-4.wav',
     'SI-4': './Sounds/SI-4.wav',
     'DO-5': './Sounds/DO-5.wav',
     'DO-sostenido-5': './Sounds/DO-sostenido-5.wav',
@@ -33,7 +33,7 @@ const noteFiles = {
     'SOL-5': './Sounds/SOL-5.wav',
     'SOL-sostenido-5': './Sounds/SOL-sostenido-5.wav',
     'LA-5': './Sounds/LA-5.wav',
-    'LA-sostenido-5': './Sounds/LA-5.wav',
+    'LA-sostenido-5': './Sounds/LA-sostenido-5.wav',
     'SI-5': './Sounds/SI-5.wav',
     'DO-6': './Sounds/DO-6.wav',
 };
@@ -481,3 +481,4 @@ function detenerMetronomo() {
 
 iniciarBtn.addEventListener('click', iniciarMetronomo);
 detenerBtn.addEventListener('click', detenerMetronomo);
+

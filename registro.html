@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión en Tacuarita</title>
+    <link rel="stylesheet" href="./registro.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const rolRadios = document.querySelectorAll('input[name="rol"]');
+    const datosAcademicos = document.getElementById('datosAcademicos');
+    const datosLaborales = document.getElementById('datosLaborales');
+
+    const camposAcademicos = document.querySelectorAll('#facultadEstudiante, #carrera, #anioIngreso, #legajo');
+    const camposLaborales = document.querySelectorAll('#facultadDocente, #cargo, #departamento');
+
+    rolRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            const esEstudiante = radio.value === 'edu';
+            
+            datosAcademicos.classList.toggle('rol-data-visible', esEstudiante);
+            datosAcademicos.classList.toggle('rol-data-hidden', !esEstudiante);
+            datosLaborales.classList.toggle('rol-data-visible', !esEstudiante);
+            datosLaborales.classList.toggle('rol-data-hidden', esEstudiante);
+            
+            // Manejo de atributos 'required'
+            camposAcademicos.forEach(campo => campo.toggleAttribute('required', esEstudiante));
+            camposLaborales.forEach(campo => campo.toggleAttribute('required', !esEstudiante));
+        });
+    });
+});
+</script>
+<body>
+    <div class="container">
+        <div class="tacuara">
+            <img class="image-tacuara" src="./images/tacuarita.png" alt="img" id="logo">
+        </div>
+        <h1 class="titulo">Registro Tacuarita</h1>
+        <p>Para regresar al panel de ingreso <a href="./login.html">Click aquí</a></p>
+        <form id="registroForm">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="text" id="documento" placeholder="Tipo y número de documento" required>
+            <input type="date" id="fechaNacimiento" required>
+            <select id="genero" required>
+                <option value="">Género</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            <input type="text" id="nacionalidad" placeholder="Nacionalidad" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required>
+            <input type="file" id="fotoPerfil" accept="image/*">
+    
+            <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+            <input type="text" id="direccion" placeholder="Dirección (calle, número, etc.)" required>
+    
+            <div class="rol-group">
+                <div class="rol-selector">
+                    <label>
+                        <input type="radio" name="rol" value="edu" required>
+                        Estudiante
+                    </label>
+                    <label>
+                        <input type="radio" name="rol" value="admin" required>
+                        Docente/Administrativo
+                    </label>
+                </div>
+    
+                <div class="rol-data rol-data-hidden" id="datosAcademicos">
+                    <input type="text" id="facultadEstudiante" placeholder="Facultad" required>
+                    <input type="text" id="carrera" placeholder="Carrera" required>
+                    <input type="number" id="anioIngreso" placeholder="Año de ingreso" required>
+                    <input type="text" id="legajo" placeholder="Legajo" required>
+                </div>
+    
+                <div class="rol-data rol-data-hidden" id="datosLaborales">
+                    <input type="text" id="facultadDocente" placeholder="Facultad" required>
+                    <input type="text" id="cargo" placeholder="Cargo" required>
+                    <input type="text" id="departamento" placeholder="Departamento" required>
+                </div>
+            </div>
+    
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p class="derechos">®Desing by: Angel Perla <a href="#"></a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="animation.js"></script>
+    <script src="chords.js"></script>
+    <script src="library.js"></script>
+    <script src="piano.js"></script>
+    <script src="intervalos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
